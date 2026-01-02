@@ -105,6 +105,7 @@ Topic 5: Props
 * Props are data passed from parent to child.
 * Read only means in child component props can not be modified.
 * Child can not change parent state.
+* props passed from parent to child not child to parent.
 We call it "One way data binding"..
 
 Topic 6: State

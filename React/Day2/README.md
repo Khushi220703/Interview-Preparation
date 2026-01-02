@@ -10,7 +10,7 @@ Topic 1: Virtual Dom
 * Virtual Dom is lightweight JS object representation of real Dom.
 * React uses virtual dom which imporves performance of web application.
 
-What happen here is:
+What happen here is: 
 
 When any change in the state and props happen the page re-renders and create a vitual dom.
 It compares the chnages occured with the real dom chnages only the changed part in virtual dom of real dom.
