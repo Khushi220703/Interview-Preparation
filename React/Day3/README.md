@@ -47,6 +47,7 @@ Topic 2: UseContext
 
 * It is one of the solution for prop drilling (unnecessary sending props to other child component who dont need increase space).
 
+<pre>
 <App>
   <Parent>
     <Child>
@@ -54,6 +55,7 @@ Topic 2: UseContext
     </Child>
   </Parent>
 </App>
+</pre>
  
  here only grandChild need prop but we have to pass to parent and child which is useless.
 
@@ -63,9 +65,11 @@ Topic 2: UseContext
 const themeContext = createContext();  
 
 -> provide context.
+<pre>
 <themeContext.Provider name="khushbu">
  <Child/>
 </themeContext.Provider>
+</pre>
 
 -> consuming context.
 const theme = useContext(theme);

@@ -60,6 +60,7 @@ Topic 4: AbortController
 Have you think what happen if an api is called but user remove the componet if not handled correlty may lead to memeory leak
 hence we should abort the controller in the cleanup which cancels api when component unmount.
 
+<pre>
 useEffect(() => {
   const controller = new AbortController();
 
@@ -75,6 +76,7 @@ useEffect(() => {
   return () => controller.abort();
 }, []);
 
+</pre>
 this arises in fetch while axios supports abortController.
 
 Topic 5: Avoiding Infinite Loops in useEffect
@@ -84,6 +86,7 @@ As it is a side effect need to be done when ui rendered.
 
 but we should do it properly so it may not lead to infinte loop
 
+<pre>
 useEffect(() => {
   fetchData();
   setData(...);
@@ -94,3 +97,4 @@ useEffect(() => {
   setData(...);
 }, []); // no infinite loop correct
 
+</pre>

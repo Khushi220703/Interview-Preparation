@@ -32,10 +32,11 @@ disadv
 2. Inline Styles
 
 Styles written directly inside JSX as an object.
-
+<pre>
 <button style={{ color: "red", fontSize: "16px" }}>
   Click
 </button>
+</pre>
 
 adv
 * Quick for dynamic styles
@@ -66,17 +67,20 @@ disadv
 4. Conditional Styling
 Changing styles based on state or props.
 
-
+<pre>
 <button className={isActive ? "active" : "inactive"}>
   Click
 </button>
+</pre>
 
 
 Or inline:
 
+<pre>
 <button style={{ color: isActive ? "green" : "red" }}>
   Click
 </button>
+</pre>
 
 Use cases:
 * Active tabs

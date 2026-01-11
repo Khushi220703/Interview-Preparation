@@ -50,11 +50,13 @@ What is Memoization?
 
 Caching a value or function so React doesn’t recompute it.
 
+<pre>
 Topic 4️ React.memo (Component-level memoization)
 const Child = React.memo(({ value }) => {
   console.log("Child rendered");
   return <div>{value}</div>;
 });
+</pre>
 
 
 * Prevents re-render if props don’t change
@@ -70,9 +72,11 @@ Topic 5 : useMemo (Value memoization)
 Why useMemo?
 Prevents expensive recalculations
 
+<pre>
 const expensiveValue = useMemo(() => {
   return heavyCalculation(count);
 }, [count]);
+</pre>
 
 
 Memoizes result
@@ -87,9 +91,11 @@ Topic 6️. useCallback (Function memoization)
  
 Prevents function reference change
 
+<pre>
 const handleClick = useCallback(() => {
   console.log(count);
 }, [count]);
+</pre>
 
 
  Used with React.memo

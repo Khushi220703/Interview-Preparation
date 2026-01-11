@@ -13,23 +13,29 @@ OLD WAY — Class Components
 
 Runs once when component loads.
 
+<pre>
 componentDidMount() {
   // API calls
   // subscriptions
 }
+</pre>
 
 2) Updating (props/state change)
 
 Runs after re-render.
 
+<pre>
 componentDidUpdate(prevProps, prevState) {
   // compare old vs new
 }
+</pre>
 
+<pre>
 3) Unmounting (component removed)
 componentWillUnmount() {
   // cleanup
 }
+</pre>
 
 -> NEW WAY — Hooks
 
@@ -39,6 +45,7 @@ Class Lifecycle	Hook Equivalent
 * componentDidUpdate	useEffect(() => {}, [deps])
 * componentWillUnmount	return () => {}
 
+<pre>
 useEffect(() => {
   console.log("Mounted");
 
@@ -46,6 +53,7 @@ useEffect(() => {
     console.log("Unmounted");
   };
 }, []);
+</pre>
  
 
 Note: “useEffect combines all lifecycle methods into one API.”
@@ -59,9 +67,11 @@ What is Client-Side Routing?
 * BrowserRouter
 import { BrowserRouter } from "react-router-dom";
 
+<pre>
 <BrowserRouter>
   <App />
 </BrowserRouter>
+</pre>
 
 -> Wraps the whole app
 -> Enables routing
@@ -69,13 +79,17 @@ import { BrowserRouter } from "react-router-dom";
 * Routes & Route
 import { Routes, Route } from "react-router-dom";
 
+<pre>
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/users" element={<Users />} />
 </Routes>
+</pre>
 
  useParams (Dynamic routes)
+ <pre>
 <Route path="/user/:id" element={<User />} />
+</pre>
 
 const { id } = useParams();
 
@@ -102,6 +116,7 @@ const ProtectedRoute = ({ children }) => {
   return isAuth ? children : <Navigate to="/login" />;
 };
 
+<pre>
 <Route
   path="/dashboard"
   element={
@@ -110,8 +125,12 @@ const ProtectedRoute = ({ children }) => {
     </ProtectedRoute>
   }
 />
+</pre>
 
  * 404 Handling
+
+ <pre>
 <Route path="*" element={<NotFound />} />
+</pre>
 
 Note :Always keep at bottom
